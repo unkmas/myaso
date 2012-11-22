@@ -182,7 +182,12 @@ class Myaso::MSD
     def parse! msd_line
       msd = msd_line.chars.to_a
 
-      category_code = msd.shift
+      category_length = if language.const_defined? 'CODE_LENGTH'
+        language::CODE_LENGTH
+      else
+        1
+      end
+      category_code = msd.shift(category_length).join
 
       @pos, category = language::CATEGORIES.find do |name, category|
         category[:code] == category_code
@@ -194,6 +199,7 @@ class Myaso::MSD
 
       msd.each_with_index do |value_code, i|
         attr_name, values = attrs[i]
+        break unless attr_name
         raise InvalidDescriptor, msd_line unless attr_name
 
         next if :blank == attr_name

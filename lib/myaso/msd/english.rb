@@ -12,237 +12,172 @@ module Myaso::MSD::English
   # English Noun.
   #
   NOUN = {
-    code: 'N',
+    code: 'NN',
     attrs: [
-      [ :type, {
-        common: 'c',
-        proper: 'p'
-      } ],
-      [ :gender, {
-        masculine: 'm',
-        feminine: 'f',
-        neuter: 'n'
-      } ],
-      [ :number, {
-        singular: 's',
-        plural: 'p'
-      } ]
     ]
   }
 
   # English Verb.
   #
   VERB = {
-    code: 'V',
+    code: 'VB',
     attrs: [
-      [ :type, {
-        main: 'm',
-        auxiliary: 'a',
-        modal: 'o',
-        base: 'b'
-      } ],
-      [ :vform, {
-        indicative: 'i',
-        conditional: 'c',
-        infinitive: 'n',
-        participle: 'p'
-      } ],
-      [ :tense, {
-        present: 'p',
-        past: 's'
-      } ],
-      [ :person, {
-        first: '1',
-        second: '2',
-        third: '3'
-      } ],
-      [ :number, {
-        singular: 's',
-        plural: 'p'
-      } ]
     ]
   }
 
   # English Adjective.
   #
   ADJECTIVE = {
-    code: 'A',
+    code: 'JJ',
     attrs: [
-      [ :type, {
-        qualificative: 'f'
-      } ],
-      [ :degree, {
-        positive: 'p',
-        comparative: 'c',
-        superlative: 's'
-      } ]
-    ]
-  }
-
-  # English Pronoun.
-  #
-  PRONOUN = {
-    code: 'P',
-    attrs: [
-      [ :type, {
-        personal: 'p',
-        possessive: 's',
-        interrogative: 'q',
-        relative: 'r',
-        reflexive: 'x',
-        general: 'g',
-        ex_there: 't'
-      } ],
-      [ :person, {
-        first: '1',
-        second: '2',
-        third: '3'
-      } ],
-      [ :gender, {
-        masculine: 'm',
-        feminine: 'f',
-        neuter: 'n'
-      } ],
-      [ :number, {
-        singular: 's',
-        plural: 'p'
-      } ],
-      [ :case, {
-        nominative: 'n',
-        accusative: 'a'
-      } ],
-      [ :owner_number, {
-        singular: 's',
-        plural: 'p'
-      } ],
-      [ :owner_gender, {
-        masculine: 'm',
-        feminine: 'f'
-      } ],
-      [ :wh_type, {
-        relative: 'r',
-        question: 'q'
-      } ],
     ]
   }
 
   # English Determiner.
   #
   DETERMINER = {
-    code: 'D',
+    code: 'DT',
     attrs: [
-      [ :type, {
-        demonstrative: 'd',
-        indefinite: 'i',
-        possessive: 's',
-        general: 'g'
-      } ],
-      [ :person, {
-        first: '1',
-        second: '2',
-        third: '3'
-      } ],
-      [ :number, {
-        singular: 's',
-        plural: 'p'
-      } ],
-      [ :owner_number, {
-        singular: 's',
-        plural: 'p'
-      } ],
-      [ :owner_gender, {
-        masculine: 'm',
-        feminine: 'f',
-        neuter: 'n'
-      } ],
-      [ :wh_type, {
-        relative: 'r',
-        question: 'q'
-      } ]
     ]
   }
 
   # English Adverb.
   #
   ADVERB = {
-    code: 'R',
+    code: 'RB',
     attrs: [
-      [ :type, {
-        modifier: 'm',
-        specifier: 's'
-      } ],
-      [ :degree, {
-        positive: 'p',
-        comparative: 'c',
-        superlative: 's'
-      } ],
-      [ :wh_type, {
-        relative: 'r',
-        question: 'q'
-      } ]
-    ]
-  }
-
-  # English Adposition.
-  #
-  ADPOSITION = {
-    code: 'S',
-    attrs: [
-      [ :type, {
-        preposition: 'p',
-        postposition: 't'
-      } ]
     ]
   }
 
   # English Conjunction.
   #
   CONJUNCTION = {
-    code: 'C',
+    code: 'CC',
     attrs: [
-      [ :type, {
-        coordinating: 'c',
-        subordinating: 's'
-      } ],
-      [ :coord_type, {
-        initial: 'i',
-        non_initial: 'n'
-      } ],
     ]
   }
 
   # English Numeral.
   #
   NUMERAL = {
-    code: 'M',
+    code: 'CD',
     attrs: [
-      [ :type, {
-        cardinal: 'c',
-        ordinal: 'o'
-      } ],
     ]
   }
 
   # English Interjection.
   #
   INTERJECTION = {
-    code: 'I',
+    code: 'UH',
     attrs: []
   }
 
-  # English Abbreviation.
-  #
-  ABBREVIATION = {
-    code: 'Y',
+  EXISTENTIAL_THERE = {
+    code: 'EX',
     attrs: []
   }
 
-  # English Residual.
+  FOREIGN_WORD = {
+    code: 'FW',
+    attrs: []
+  }
+
+  # Preposition or subordinating conjunction
   #
+  PREPOSITION = {
+    code: 'IN',
+    attrs: []
+  }
+
+  # List item marker
+  #
+  LIST_ITEM = {
+    code: 'IN',
+    attrs: []
+  }
+
+  # Modal
+  #
+  MODAL = {
+    code: 'MD',
+    attrs: []
+  }
+
+  # Proper noun
+  #
+  PROPER_NOUN = {
+    code: 'NP',
+    attrs: []
+  }
+
+  # Predeterminer
+  #
+  PREDETERMINER = {
+    code: 'PD',
+    attrs: []
+  }
+
+  # Possessive ending
+  #
+  POSSESSIVE_ENDING = {
+    code: 'PO',
+    attrs: []
+  }
+
+  # Pronoun
+  #
+  PRONOUN = {
+    code: 'PP',
+    attrs: []
+  }
+
+  # Particle
+  #
+  PARTICLE = {
+    code: 'RP',
+    attrs: []
+  }
+
+  # Symbol
+  #
+  SYMBOL = {
+    code: 'SY',
+    attrs: []
+  }
+
+  # To
+  #
+  TO = {
+    code: 'TO',
+    attrs: []
+  }
+
+  # Wh-determiner
+  #
+  WH_DEETERMINER = {
+    code: 'WD',
+    attrs: []
+  }
+
+  # Wh-pronoun
+  #
+  WH_PRONOUN = {
+    code: 'WP',
+    attrs: []
+  }
+
+  # Wh-adverb
+  #
+  WH_ADVERB = {
+    code: 'WR',
+    attrs: []
+  }
+
   RESIDUAL = {
-    code: 'X',
+    code: 'XX',
     attrs: []
   }
+
 
   # Actual part-of-speech mapping.
   #
@@ -250,14 +185,28 @@ module Myaso::MSD::English
     noun: NOUN,
     verb: VERB,
     adjective: ADJECTIVE,
-    pronoun: PRONOUN,
     determiner: DETERMINER,
     adverb: ADVERB,
-    adposition: ADPOSITION,
     conjunction: CONJUNCTION,
     numeral: NUMERAL,
     interjection: INTERJECTION,
-    abbreviation: ABBREVIATION,
+    existential: EXISTENTIAL_THERE,
+    foreign_word: FOREIGN_WORD,
+    preposition: PREPOSITION,
+    list_item: LIST_ITEM,
+    modal: MODAL,
+    proper_noun: PROPER_NOUN,
+    predeterminer: PREDETERMINER,
+    ending: POSSESSIVE_ENDING,
+    pronoun: PRONOUN,
+    particle: PARTICLE,
+    symbol: SYMBOL,
+    to: TO,
+    wh_determiner: WH_DEETERMINER,
+    wh_pronoun: WH_PRONOUN,
+    wh_adverb: WH_ADVERB,
     residual: RESIDUAL
   }
+
+  CODE_LENGTH = 2
 end
